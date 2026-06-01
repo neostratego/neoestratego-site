@@ -1,0 +1,90 @@
+<svg viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="bg-magenta" cx="72%" cy="82%" r="58%">
+      <stop offset="0%"   stop-color="#cc00ff" stop-opacity="0.50"/>
+      <stop offset="45%"  stop-color="#6600cc" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#6600cc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bg-blue" cx="82%" cy="12%" r="42%">
+      <stop offset="0%"   stop-color="#0055ff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0055ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bg-center" cx="53%" cy="37%" r="32%">
+      <stop offset="0%"   stop-color="#00aaff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00aaff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g1" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%"   stop-color="#00e5ff" stop-opacity="0.95"/>
+      <stop offset="55%"  stop-color="#0088ff" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#003399" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#00ccff" stop-opacity="0.88"/>
+      <stop offset="60%"  stop-color="#0044bb" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#001177" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00e5ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#00aaff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="100%" y1="0%" x2="10%" y2="100%">
+      <stop offset="0%"   stop-color="#4400ff" stop-opacity="0.85"/>
+      <stop offset="55%"  stop-color="#7700cc" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#330088" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#9900ff" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#ff00bb" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="g6" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%"   stop-color="#003366" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#001133" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur-heavy" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="blur-med" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+    <filter id="blur-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="glow-center" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="700" height="560" fill="url(#bg-magenta)"/>
+  <rect width="700" height="560" fill="url(#bg-blue)"/>
+  <rect width="700" height="560" fill="url(#bg-center)"/>
+
+  <g filter="url(#blur-heavy)" opacity="0.72">
+    <polygon points="370,205 340,230 -60,90 10,-30"   fill="url(#g1)"/>
+    <polygon points="370,205 350,240 30,420 70,340"   fill="url(#g2)"/>
+    <polygon points="370,205 352,225 110,540 158,560" fill="url(#g4)"/>
+    <polygon points="370,205 394,200 610,420 578,465" fill="url(#g5)"/>
+    <polygon points="370,205 400,188 640,50 605,8"    fill="url(#g6)"/>
+  </g>
+
+  <g filter="url(#blur-med)" opacity="0.65">
+    <polygon points="370,205 348,224 -30,75 20,-20"   fill="url(#g1)"/>
+    <polygon points="370,205 356,230 58,392 84,318"   fill="url(#g2)"/>
+    <polygon points="370,205 357,220 138,512 176,530" fill="url(#g4)"/>
+    <polygon points="370,205 388,202 592,402 564,448" fill="url(#g5)"/>
+    <polygon points="370,205 396,192 622,55 592,14"   fill="url(#g6)"/>
+  </g>
+
+  <g filter="url(#blur-soft)" opacity="0.50">
+    <polygon points="370,205 350,220 -30,75 20,-20"   fill="url(#g1)"/>
+    <polygon points="370,205 358,226 60,388 86,316"   fill="url(#g2)"/>
+    <polygon points="370,205 390,194 470,-42 442,-54" fill="url(#g3)"/>
+    <polygon points="370,205 358,218 140,510 178,530" fill="url(#g4)"/>
+    <polygon points="370,205 388,200 590,400 562,445" fill="url(#g5)"/>
+  </g>
+
+  <circle cx="370" cy="205" r="60" fill="#00ccff" opacity="0.04" filter="url(#glow-center)"/>
+  <circle cx="370" cy="205" r="30" fill="#00aaff" opacity="0.06" filter="url(#blur-heavy)"/>
+  <circle cx="370" cy="205" r="10" fill="#ffffff" opacity="0.07" filter="url(#blur-med)"/>
+
+</svg>
