@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="794" height="1123">
+  <!-- Tamaño carta a 96dpi: 8.5 x 11 pulgadas -->
+  <defs>
+    <linearGradient id="header-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0A1A2F"/>
+      <stop offset="100%" stop-color="#0D2040"/>
+    </linearGradient>
+    <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00C9FF"/>
+      <stop offset="100%" stop-color="#A0F7F7"/>
+    </linearGradient>
+    <linearGradient id="accent-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#8A2BE2"/>
+      <stop offset="50%"  stop-color="#00C9FF"/>
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="footer-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0A1A2F"/>
+      <stop offset="100%" stop-color="#071525"/>
+    </linearGradient>
+    <linearGradient id="crystal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#00C9FF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8A2BE2" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ══════════════ FONDO GENERAL ══════════════ -->
+  <rect width="794" height="1123" fill="#FFFFFF"/>
+
+  <!-- Textura sutil de fondo (área de contenido) -->
+  <rect x="0" y="140" width="794" height="900" fill="#F7F9FC"/>
+
+  <!-- Decoración cristal esquina derecha (marca de agua) -->
+  <g opacity="0.06" transform="translate(560, 300)">
+    <polygon points="120,0 50,40 0,140 50,200 120,220 190,200 240,140 190,40" fill="#00C9FF"/>
+    <polygon points="120,20 60,55 20,140 60,185 120,200 180,185 220,140 180,55" fill="#8A2BE2"/>
+  </g>
+  <g opacity="0.04" transform="translate(40, 500)">
+    <polygon points="80,0 30,30 0,90 30,140 80,155 130,140 160,90 130,30" fill="#00C9FF"/>
+  </g>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <rect x="0" y="0" width="794" height="120" fill="url(#header-bg)"/>
+
+  <!-- Línea de acento degradado -->
+  <rect x="0" y="118" width="794" height="3" fill="url(#accent-line)"/>
+
+  <!-- Isotipo N -->
+  <g transform="translate(48, 22)" filter="url(#glow)">
+    <line x1="5"  y1="4"  x2="5"  y2="72" stroke="#00C9FF" stroke-width="7" stroke-linecap="round"/>
+    <line x1="5"  y1="4"  x2="48" y2="72" stroke="#00C9FF" stroke-width="5" stroke-linecap="round"/>
+    <line x1="48" y1="4"  x2="48" y2="72" stroke="#00C9FF" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="34" cy="28" r="6.5" fill="#8A2BE2"/>
+    <circle cx="34" cy="28" r="3"   fill="#B060FF" opacity="0.8"/>
+  </g>
+
+  <!-- Separador -->
+  <line x1="116" y1="26" x2="116" y2="94" stroke="rgba(0,201,255,0.25)" stroke-width="1.2"/>
+
+  <!-- Wordmark -->
+  <text x="132" y="62"
+    font-family="Oswald, Impact, sans-serif"
+    font-size="30" font-weight="600" letter-spacing="4"
+    fill="#00C9FF" filter="url(#glow)">NEO</text>
+  <text x="205" y="62"
+    font-family="Oswald, Impact, sans-serif"
+    font-size="30" font-weight="300" letter-spacing="3"
+    fill="#FFFFFF" opacity="0.93">STRATEGO</text>
+
+  <!-- Tagline header -->
+  <text x="132" y="82"
+    font-family="Inter, Arial, sans-serif"
+    font-size="9" font-weight="400" letter-spacing="3.5"
+    fill="#00C9FF" opacity="0.55">ESTRATEGIA · DATOS · IMPACTO</text>
+
+  <!-- Info de contacto en header (derecha) -->
+  <text x="750" y="48" text-anchor="end"
+    font-family="Inter, Arial, sans-serif"
+    font-size="9" fill="#A0F7F7" opacity="0.75" letter-spacing="0.5">www.neostratego.com</text>
+  <text x="750" y="64" text-anchor="end"
+    font-family="Inter, Arial, sans-serif"
+    font-size="9" fill="#FFFFFF" opacity="0.45" letter-spacing="0.5">contacto@neostratego.com</text>
+  <text x="750" y="80" text-anchor="end"
+    font-family="Inter, Arial, sans-serif"
+    font-size="9" fill="#FFFFFF" opacity="0.45" letter-spacing="0.5">México</text>
+
+  <!-- ══════════════ LÍNEA SEPARADORA SUPERIOR ══════════════ -->
+  <line x1="48" y1="155" x2="746" y2="155" stroke="rgba(0,201,255,0.2)" stroke-width="0.8"/>
+
+  <!-- Fecha / referencia (placeholders) -->
+  <text x="48" y="172"
+    font-family="Inter, Arial, sans-serif"
+    font-size="9" fill="#8A9BB0" letter-spacing="1">
+    Ciudad de México, _____ de ____________ de 20___
+  </text>
+
+  <!-- ══════════════ ÁREA DE CONTENIDO (guides) ══════════════ -->
+  <!-- Línea lateral izquierda de acento -->
+  <rect x="48" y="195" width="2.5" height="780" fill="url(#accent-line)" opacity="0.35"/>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <rect x="0" y="1050" width="794" height="73" fill="url(#footer-bg)"/>
+  <rect x="0" y="1049" width="794" height="2" fill="url(#accent-line)"/>
+
+  <!-- Isotipo pequeño footer -->
+  <g transform="translate(40, 1058)" opacity="0.7" filter="url(#glow)">
+    <line x1="3" y1="2" x2="3" y2="30" stroke="#00C9FF" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="3" y1="2" x2="22" y2="30" stroke="#00C9FF" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="22" y1="2" x2="22" y2="30" stroke="#00C9FF" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="15" cy="11" r="3" fill="#8A2BE2"/>
+  </g>
+
+  <!-- Texto footer -->
+  <text x="76" y="1072"
+    font-family="Oswald, Impact, sans-serif"
+    font-size="12" font-weight="600" letter-spacing="2"
+    fill="#00C9FF" opacity="0.85">NEO<tspan font-weight="300">STRATEGO</tspan></text>
+
+  <text x="76" y="1087"
+    font-family="Inter, Arial, sans-serif"
+    font-size="8" fill="#FFFFFF" opacity="0.35" letter-spacing="1.5">
+    ESTRATEGIA · DATOS · IMPACTO
+  </text>
+
+  <!-- Info legal footer (centrado) -->
+  <text x="397" y="1072" text-anchor="middle"
+    font-family="Inter, Arial, sans-serif"
+    font-size="8" fill="#FFFFFF" opacity="0.35" letter-spacing="0.5">
+    Documento confidencial — uso exclusivo del destinatario
+  </text>
+  <text x="397" y="1086" text-anchor="middle"
+    font-family="Inter, Arial, sans-serif"
+    font-size="8" fill="#FFFFFF" opacity="0.25" letter-spacing="0.5">
+    © 2025 NeoStratego · Todos los derechos reservados
+  </text>
+
+  <!-- Número de página (derecha) -->
+  <text x="750" y="1079" text-anchor="end"
+    font-family="Oswald, sans-serif"
+    font-size="11" fill="#00C9FF" opacity="0.45" letter-spacing="2">
+    Pág. 1
+  </text>
+
+  <!-- Línea base -->
+  <rect x="0" y="1120" width="794" height="3" fill="#00C9FF" opacity="0.15"/>
+</svg>

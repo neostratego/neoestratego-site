@@ -1,3 +1,262 @@
+/* NEOSTRATEGO — CSS Consolidado */
+/* ═══════════════════════════════════════════════════
+   NEOSTRATEGO — BRAND PROTOCOL v2.0
+   Sistema Cromático Estricto
+   ═══════════════════════════════════════════════════ */
+
+:root {
+    /* ── Colores principales ── */
+    --bg:            #0A1A2F;
+    --bg-card:       #0D2040;
+    --bg-card-alt:   #091828;
+    --bg-section:    #071525;
+    --cyan:          #00C9FF;
+    --cyan-light:    #A0F7F7;
+    --cyan-dim:      rgba(0, 201, 255, 0.15);
+    --purple:        #8A2BE2;
+    --purple-dim:    rgba(138, 43, 226, 0.2);
+    --white:         #FFFFFF;
+    --muted:         #B0B0B0;
+    --border:        rgba(0, 201, 255, 0.18);
+    --border-active: rgba(0, 201, 255, 0.6);
+
+    /* ── Tipografía ── */
+    --font-display: 'Playfair Display', 'Georgia', serif;
+    --font-ui:      'Oswald', 'Impact', sans-serif;
+    --font-body:    'Inter', 'Space Grotesk', sans-serif;
+
+    /* ── Spacing ── */
+    --px:       120px;
+    --pxm:      24px;
+    --section-v: 120px;
+
+    /* ── Border radius ── */
+    --radius:   4px;
+    --radius-md: 8px;
+}
+
+/* ── Selección ── */
+::selection      { background-color: var(--cyan); color: var(--bg); }
+::-moz-selection { background-color: var(--cyan); color: var(--bg); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(0,201,255,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+/* ═══════════════════════════════════════════════════
+   NEOSTRATEGO — Reset CSS
+   ═══════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+ul, ol { list-style: none; }
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font: inherit;
+}
+
+input, textarea, select {
+    font: inherit;
+}
+/* ═══════════════════════════════════════════════════
+   NEOSTRATEGO — Typography System
+   Brand Protocol: Playfair / Oswald / Inter
+   ═══════════════════════════════════════════════════ */
+
+/* ── Hero Heading (Playfair Display) ── */
+.hero-heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(4rem, 8.5vw, 8rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+/* ── Hero eyebrow ── */
+.hero-eyebrow {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+/* ── Section headings ── */
+.section-heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 4.5vw, 4rem);
+    line-height: 1.08;
+    color: var(--white);
+    margin-bottom: 1.4rem;
+    letter-spacing: -0.01em;
+}
+
+.section-heading--xl {
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 1.02;
+}
+
+/* ── Section label (Oswald uppercase) ── */
+.section-label {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1.2rem;
+}
+
+/* ── Body text ── */
+.section-body {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 640px;
+    margin-bottom: 1rem;
+}
+
+/* ── Card title ── */
+.card-title {
+    font-family: var(--font-ui);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+}
+
+.card-body {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* ── Service block title ── */
+.service-block-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0;
+}
+
+/* ── Nav logo ── */
+.nav-logo {
+    font-family: var(--font-ui);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+/* ── Tags ── */
+.tag {
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    border: 1px solid var(--border);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius);
+    display: inline-block;
+    transition: background 0.2s, border-color 0.2s;
+}
+.tag:hover {
+    background: var(--cyan-dim);
+    border-color: var(--cyan);
+}
+
+/* ── Footer copy ── */
+.footer-copy {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+/* ── Stat number ── */
+.stat-number {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--cyan);
+    line-height: 1;
+    display: block;
+}
+.stat-label {
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    display: block;
+}
+
+/* ── Pricing ── */
+.price-amount {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+}
+.price-period {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--muted);
+}
 /* ═══════════════════════════════════════════════════
    NEOSTRATEGO — Layout System
    Brand Protocol v2.0 — Navy #0A1A2F
@@ -1315,17 +1574,4 @@
     .hero-heading { font-size: clamp(3rem, 12vw, 5rem); }
 
     .episodes-grid { grid-template-columns: 1fr; }
-    .team-grid { grid-template-columns: 1fr; }
-    .stats-row { grid-template-columns: 1fr; }
-    .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
-    .process-steps { grid-template-columns: 1fr; }
-    .process-step { border-right: none; }
-
-    .newsletter-form { flex-direction: column; }
-    .checkboxes-group { grid-template-columns: 1fr; }
-    .countdown-row { gap: 1.2rem; }
-
-    .reg-form { padding: 1.6rem; }
-    .hero-ctas { flex-direction: column; }
-    .hero-ctas .btn-hero, .hero-ctas .btn-ghost { text-align: center; justify-content: center; }
-}
+    .team-grid { grid-template-col

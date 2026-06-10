@@ -1,4 +1,6 @@
-@import url('variables.css');
-@import url('reset.css');
-@import url('typography.css');
-@import url('layout.css');
+/* ═══════════════════════════════════════════════════
+   NEOSTRATEGO — Main CSS
+   Fuentes cargadas inline para máxima compatibilidad
+   ═══════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('bundle.css');

@@ -1,21 +1,45 @@
+/* ═══════════════════════════════════════════════════
+   NEOSTRATEGO — BRAND PROTOCOL v2.0
+   Sistema Cromático Estricto
+   ═══════════════════════════════════════════════════ */
+
 :root {
-    --bg:            #0d1128;
-    --bg-card:       #131a38;
-    --bg-card-alt:   #0f1730;
-    --cyan:          #00d4ff;
-    --cyan-dim:      #00aacc;
-    --magenta:       #cc00ff;
-    --white:         #ffffff;
-    --muted:         #8892b0;
-    --border:        rgba(0, 212, 255, 0.2);
-    --border-active: rgba(0, 212, 255, 0.65);
+    /* ── Colores principales ── */
+    --bg:            #0A1A2F;
+    --bg-card:       #0D2040;
+    --bg-card-alt:   #091828;
+    --bg-section:    #071525;
+    --cyan:          #00C9FF;
+    --cyan-light:    #A0F7F7;
+    --cyan-dim:      rgba(0, 201, 255, 0.15);
+    --purple:        #8A2BE2;
+    --purple-dim:    rgba(138, 43, 226, 0.2);
+    --white:         #FFFFFF;
+    --muted:         #B0B0B0;
+    --border:        rgba(0, 201, 255, 0.18);
+    --border-active: rgba(0, 201, 255, 0.6);
 
-    --font-main: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* ── Tipografía ── */
+    --font-display: 'Playfair Display', 'Georgia', serif;
+    --font-ui:      'Oswald', 'Impact', sans-serif;
+    --font-body:    'Inter', 'Space Grotesk', sans-serif;
 
-    --px:  80px;
-    --pxm: 24px;
+    /* ── Spacing ── */
+    --px:       120px;
+    --pxm:      24px;
+    --section-v: 120px;
+
+    /* ── Border radius ── */
+    --radius:   4px;
+    --radius-md: 8px;
 }
 
+/* ── Selección ── */
 ::selection      { background-color: var(--cyan); color: var(--bg); }
 ::-moz-selection { background-color: var(--cyan); color: var(--bg); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(0,201,255,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan); }

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Isotipo standalone NeoStratego -->
+  <defs>
+    <linearGradient id="bg-iso" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0A1A2F"/>
+      <stop offset="100%" stop-color="#0D2040"/>
+    </linearGradient>
+    <linearGradient id="stroke-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#00C9FF"/>
+      <stop offset="100%" stop-color="#A0F7F7"/>
+    </linearGradient>
+    <filter id="glow-iso" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fondo redondeado -->
+  <rect width="100" height="100" rx="16" fill="url(#bg-iso)"/>
+  <!-- Borde sutil cyan -->
+  <rect width="100" height="100" rx="16" fill="none" stroke="#00C9FF" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- N centrada -->
+  <g transform="translate(18, 14)" filter="url(#glow-iso)">
+    <line x1="6"  y1="4"  x2="6"  y2="70" stroke="url(#stroke-grad)" stroke-width="8" stroke-linecap="round"/>
+    <line x1="6"  y1="4"  x2="58" y2="70" stroke="url(#stroke-grad)" stroke-width="6" stroke-linecap="round"/>
+    <line x1="58" y1="4"  x2="58" y2="70" stroke="url(#stroke-grad)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Punto de acento -->
+    <circle cx="40" cy="28" r="8"   fill="#8A2BE2"/>
+    <circle cx="40" cy="28" r="4"   fill="#B060FF" opacity="0.8"/>
+    <circle cx="40" cy="28" r="1.5" fill="#FFFFFF" opacity="0.5"/>
+  </g>
+
+  <!-- Línea inferior de marca -->
+  <rect x="22" y="88" width="56" height="2" rx="1" fill="#00C9FF" opacity="0.4"/>
+</svg>

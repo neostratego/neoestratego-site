@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEOLAB | Innovación, Desarrollo e Investigación — NEOSTRATEGO</title>
+  <meta name="description" content="Consultoría estratégica, innovación tecnológica e investigación aplicada.">
+  <meta name="theme-color" content="#0A1A2F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bundle.css">
+  <style>
+    .img-wrap{position:relative;border-radius:8px;overflow:hidden}
+    .img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.5) brightness(0.6);transition:filter 0.35s}
+    .img-wrap:hover img{filter:saturate(0.65) brightness(0.72)}
+    .img-wrap .tint{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,201,255,0.12),rgba(138,43,226,0.12))}
+    .img-wrap .badge{position:absolute;bottom:1rem;left:1rem;font-family:var(--font-ui);font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cyan);background:rgba(10,26,47,0.88);padding:0.3rem 0.8rem;border-radius:2px;backdrop-filter:blur(4px)}
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="NEOSTRATEGO" style="display:flex;align-items:center;gap:0.8rem;text-decoration:none">
+      <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="8" fill="#0A1A2F"/>
+        <line x1="12" y1="12" x2="12" y2="52" stroke="#00C9FF" stroke-width="7" stroke-linecap="round"/>
+        <line x1="12" y1="12" x2="52" y2="52" stroke="#00C9FF" stroke-width="7" stroke-linecap="round"/>
+        <line x1="52" y1="12" x2="52" y2="52" stroke="#00C9FF" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="38" cy="28" r="6" fill="#8A2BE2"/>
+      </svg>
+      <span style="font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.22em;color:#fff;text-transform:uppercase">NEOSTRATEGO</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="index.html" class="nav-link" role="listitem">INICIO</a>
+      <a href="neolab.html" class="nav-link" role="listitem">NEOLAB</a>
+      <a href="neomedia.html" class="nav-link" role="listitem">NEOMEDIA</a>
+      <a href="neoeventos.html" class="nav-link" role="listitem">NEOEVENTOS</a>
+      <a href="research.html" class="nav-link" role="listitem">INVESTIGACIÓN</a>
+      <a href="about.html" class="nav-link" role="listitem">NOSOTROS</a>
+    </div>
+    <a href="contact.html" class="btn-outline">INICIAR PROYECTO</a>
+    <button class="nav-hamburger" aria-label="Menú" onclick="this.classList.toggle('open');document.querySelector('.nav-mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile-menu" role="list">
+    <a href="index.html" class="nav-link" role="listitem">INICIO</a>
+    <a href="neolab.html" class="nav-link" role="listitem">NEOLAB</a>
+    <a href="neomedia.html" class="nav-link" role="listitem">NEOMEDIA</a>
+    <a href="neoeventos.html" class="nav-link" role="listitem">NEOEVENTOS</a>
+    <a href="research.html" class="nav-link" role="listitem">INVESTIGACIÓN</a>
+    <a href="about.html" class="nav-link" role="listitem">NOSOTROS</a>
+    <a href="contact.html" class="btn-hero" style="align-self:flex-start;margin-top:0.5rem">INICIAR PROYECTO</a>
+  </div>
+</nav>
+<div class="page-overlay" aria-hidden="true"></div>
+<header class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1600&q=70&auto=format&fit=crop');background-size:cover;background-position:center" aria-labelledby="neolab-h">
+  <div class="page-hero-inner">
+    <span class="section-label">02 — NEOLAB</span>
+    <h1 class="section-heading section-heading--xl" id="neolab-h">Innovación,<br>Desarrollo e<br>Investigación.</h1>
+    <p class="section-body" style="max-width:560px">Convertimos la complejidad tecnológica y geoeconómica en estrategias claras, herramientas concretas y conocimiento aplicable para quienes toman decisiones.</p>
+    <div style="display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:2rem">
+      <a href="contact.html" class="btn-hero">HABLAR CON UN EXPERTO</a>
+      <a href="#servicios" class="btn-ghost">VER SERVICIOS</a>
+    </div>
+  </div>
+</header>
+<main id="servicios">
+
+  <!-- SERVICIO 01 -->
+  <section class="section-inner" aria-labelledby="cons-h">
+    <div class="split-layout">
+      <div>
+        <span class="section-label">SERVICIO 01</span>
+        <h2 class="section-heading" id="cons-h">Consultoría<br>Estratégica.</h2>
+        <p class="section-body">¿Tu organización sabe exactamente dónde está parada en el tablero tecnológico global? Evaluamos tu posición actual, detectamos riesgos que no estás viendo y diseñamos una estrategia de acción concreta.</p>
+        <p class="section-body">Sin diagnósticos de copia-pega. Sin recomendaciones genéricas. Estrategia construida desde tu realidad, con datos de tu contexto.</p>
+        <a href="contact.html" class="btn-hero" style="margin-top:1.6rem">SOLICITAR CONSULTORÍA</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.2rem">
+        <div class="img-wrap" style="aspect-ratio:3/2">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&auto=format&fit=crop" alt="Consultoría estratégica" loading="lazy">
+          <div class="tint"></div><span class="badge">CONSULTORÍA ESTRATÉGICA</span>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:2rem">
+          <span class="section-label" style="margin-bottom:1rem">INCLUYE</span>
+          <ul class="pricing-features">
+            <li>Auditoría de posición tecnológica y de mercado</li>
+            <li>Mapa de riesgos y oportunidades ocultas</li>
+            <li>Análisis comparativo regional (LATAM, Asia, Europa)</li>
+            <li>Hoja de ruta estratégica a 18 meses</li>
+            <li>Sesión ejecutiva de presentación</li>
+            <li>Seguimiento mensual de implementación</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIO 02 -->
+  <section class="section-inner" aria-labelledby="inf-h">
+    <span class="section-label">SERVICIO 02</span>
+    <h2 class="section-heading" id="inf-h">Informes de<br>Innovación.</h2>
+    <p class="section-body" style="max-width:680px">Para líderes que no tienen tiempo de leer el ruido pero no pueden permitirse ignorar las señales que mueven el tablero global.</p>
+    <div class="research-grid" style="margin-top:2.4rem">
+      <div class="research-card"><span class="research-card-label">Mensual</span><h3 class="research-card-title">Tecnología &amp; Geopolítica Global</h3><p class="research-card-body">Los movimientos clave en IA, semiconductores y telecomunicaciones que están redibujando el mapa del poder mundial.</p></div>
+      <div class="research-card"><span class="research-card-label">Trimestral</span><h3 class="research-card-title">Innovación en América Latina</h3><p class="research-card-body">Cómo navegan Brasil, Argentina, Ecuador y Chile la tensión entre potencias tecnológicas. Casos reales, datos verificados.</p></div>
+      <div class="research-card"><span class="research-card-label">Alerta inmediata</span><h3 class="research-card-title">Crisis &amp; Oportunidades Tech</h3><p class="research-card-body">Alertas ante eventos disruptivos: restricciones de tecnología, cambios regulatorios, movimientos de mercado.</p></div>
+      <div class="research-card"><span class="research-card-label">Especial</span><h3 class="research-card-title">Espacial &amp; Tecnologías Emergentes</h3><p class="research-card-body">Cooperación espacial, satélites y tecnologías del futuro como ventaja competitiva para la región.</p></div>
+    </div>
+  </section>
+
+  <!-- SERVICIO 03 -->
+  <section class="section-inner" aria-labelledby="idi-h">
+    <div class="split-layout split-layout--reverse">
+      <div>
+        <span class="section-label">SERVICIO 03</span>
+        <h2 class="section-heading" id="idi-h">Desarrollo<br>e I+D+i.</h2>
+        <p class="section-body">Construimos las herramientas que tu organización necesita para operar a la velocidad del mundo actual. Sistemas de análisis automatizado, plataformas digitales y soluciones de IA adaptadas a tu contexto.</p>
+        <a href="contact.html" class="btn-hero" style="margin-top:1.6rem">HABLAR DE TU PROYECTO</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.2rem">
+        <div class="img-wrap" style="aspect-ratio:3/2">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=900&q=80&auto=format&fit=crop" alt="Desarrollo tecnológico" loading="lazy">
+          <div class="tint"></div><span class="badge">I+D+i · DESARROLLO TECH</span>
+        </div>
+        <div class="img-wrap" style="aspect-ratio:3/2">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&auto=format&fit=crop" alt="Innovación tecnológica" loading="lazy">
+          <div class="tint"></div><span class="badge">INNOVACIÓN APLICADA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS -->
+  <section class="section-inner" aria-labelledby="casos-h">
+    <span class="section-label">REFERENTES</span>
+    <h2 class="section-heading" id="casos-h">Casos que<br>respaldan el método.</h2>
+    <div class="stats-row" style="margin-top:2.4rem">
+      <div class="stat-item"><span class="stat-number" style="font-size:1.6rem">Brasil</span><span class="stat-label">CBERS — Cooperación satelital sin perder soberanía de datos</span></div>
+      <div class="stat-item"><span class="stat-number" style="font-size:1.6rem">Argentina</span><span class="stat-label">Neuquén — Desarrollo tecnológico provincial con impacto nacional</span></div>
+      <div class="stat-item"><span class="stat-number" style="font-size:1.6rem">FLACSO</span><span class="stat-label">Investigación doctoral en innovación y geoeconómica tecnológica</span></div>
+      <div class="stat-item"><span class="stat-number" style="font-size:1.6rem">IBM</span><span class="stat-label">BlueCode Challenge — Silicon Valley</span></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section-inner" aria-labelledby="pricing-h">
+    <span class="section-label">INVERSIÓN</span>
+    <h2 class="section-heading" id="pricing-h">Elige tu<br>nivel.</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <span class="section-label" style="margin-bottom:0.5rem">STARTER</span>
+        <div class="price-amount">$3K</div><span class="price-period">por proyecto</span>
+        <ul class="pricing-features"><li>Diagnóstico estratégico inicial</li><li>1 Informe de innovación mensual</li><li>Sesión estratégica 2h</li><li>Informe ejecutivo 20 páginas</li></ul>
+        <a href="contact.html" class="btn-ghost" style="margin-top:auto">SOLICITAR</a>
+      </div>
+      <div class="pricing-card pricing-card--featured">
+        <span class="section-label" style="margin-bottom:0.5rem">STRATEGIC</span>
+        <div class="price-amount">$10K</div><span class="price-period">por proyecto</span>
+        <ul class="pricing-features"><li>Diagnóstico estratégico completo</li><li>3 Informes mensuales</li><li>Hoja de ruta 18 meses</li><li>Herramientas de análisis</li><li>Sesiones ejecutivas mensuales</li><li>Alertas ilimitadas</li></ul>
+        <a href="contact.html" class="btn-hero" style="margin-top:auto">SOLICITAR</a>
+      </div>
+      <div class="pricing-card">
+        <span class="section-label" style="margin-bottom:0.5rem">ENTERPRISE</span>
+        <div class="price-amount">$25K</div><span class="price-period">por proyecto</span>
+        <ul class="pricing-features"><li>Todo en Strategic</li><li>Sistema de análisis dedicado</li><li>Consejo asesor permanente</li><li>Investigación personalizada</li><li>Acceso directo al fundador</li><li>SLA 24h</li></ul>
+        <a href="contact.html" class="btn-ghost" style="margin-top:auto">SOLICITAR</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section-inner" aria-labelledby="proc-h">
+    <span class="section-label">METODOLOGÍA</span>
+    <h2 class="section-heading" id="proc-h">Cómo<br>trabajamos.</h2>
+    <div class="process-steps">
+      <div class="process-step"><div class="process-number">01</div><div class="process-title">Diagnóstico</div><p class="process-desc">Auditoría completa de tu posición actual. Sin suposiciones. Con datos verificados.</p></div>
+      <div class="process-step"><div class="process-number">02</div><div class="process-title">Análisis</div><p class="process-desc">Metodología propia + inteligencia geoeconómica. Identificamos lo que otros no ven.</p></div>
+      <div class="process-step"><div class="process-number">03</div><div class="process-title">Estrategia</div><p class="process-desc">Plan de acción concreto, ejecutable y ajustado a tu realidad. Sin PowerPoints vacíos.</p></div>
+      <div class="process-step"><div class="process-number">04</div><div class="process-title">Acompañamiento</div><p class="process-desc">No desaparecemos. Ejecutamos contigo hasta que los resultados sean medibles.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-inner">
+    <div class="cta-section">
+      <h2 class="section-heading" style="text-align:center;margin-bottom:1rem">¿Tu organización está tomando decisiones<br>con información real?</h2>
+      <p class="section-body" style="text-align:center;margin:0 auto 2rem;max-width:480px">Si la respuesta tarda en llegar, el problema ya tiene solución. Empieza aquí.</p>
+      <a href="contact.html" class="btn-hero">HABLAR CON UN EXPERTO</a>
+    </div>
+  </section>
+</main>
+<hr class="gradient-line">
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="index.html" class="nav-logo" style="display:flex;align-items:center;gap:0.6rem">
+      <svg width="24" height="24" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="8" fill="#0A1A2F"/><line x1="12" y1="12" x2="12" y2="52" stroke="#00C9FF" stroke-width="7" stroke-linecap="round"/><line x1="12" y1="12" x2="52" y2="52" stroke="#00C9FF" stroke-width="7" stroke-linecap="round"/><line x1="52" y1="12" x2="52" y2="52" stroke="#00C9FF" stroke-width="7" stroke-linecap="round"/><circle cx="38" cy="28" r="6" fill="#8A2BE2"/></svg>
+      <span>NEOSTRATEGO</span>
+    </a>
+    <div class="footer-links" role="list">
+      <a href="index.html" class="nav-link">INICIO</a>
+      <a href="neolab.html" class="nav-link">NEOLAB</a>
+      <a href="neomedia.html" class="nav-link">NEOMEDIA</a>
+      <a href="neoeventos.html" class="nav-link">NEOEVENTOS</a>
+      <a href="research.html" class="nav-link">INVESTIGACIÓN</a>
+      <a href="about.html" class="nav-link">NOSOTROS</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B0B0B0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://twitter.com/neostratego" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="X/Twitter">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#B0B0B0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B0B0B0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#B0B0B0" stroke="none"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom" style="max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem">
+    <span class="footer-copy">&copy; 2026 NEOSTRATEGO S.A.S. — Quito · Buenos Aires · LATAM</span>
+    <span class="footer-copy">estrategia@neostratego.com</span>
+  </div>
+</footer>
+<script>window.addEventListener("scroll",function(){document.getElementById("navbar").classList.toggle("scrolled",scrollY>40)},{passive:true});</script>
+</body>
+</html>

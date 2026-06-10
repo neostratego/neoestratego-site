@@ -1,0 +1,13 @@
+{
+  "name": "NEOSTRATEGO",
+  "short_name": "NeoStratego",
+  "description": "Laboratorio Latinoamericano de Inteligencia Estratégica",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0A1A2F",
+  "theme_color": "#0A1A2F",
+  "icons": [
+    { "src": "assets/images/NEO Isotipo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/images/NEO Isotipo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
