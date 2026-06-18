@@ -1575,3 +1575,6 @@ input, textarea, select {
 
     .episodes-grid { grid-template-columns: 1fr; }
     .team-grid { grid-template-col/* Cache bust: 1781071910 */
+
+/* Indicador de página activa en el navbar */
+.nav-link--active{color:var(--cyan)!important;opacity:1}
