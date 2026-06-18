@@ -35,7 +35,9 @@
     { "source": "/about", "destination": "/about.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/proyectos", "destination": "/proyectos.html" },
-    { "source": "/insights", "destination": "/insights.html" }
+    { "source": "/insights", "destination": "/insights.html" },
+    { "source": "/dossier", "destination": "/dossier-ruta-seda-espacial.html" },
+    { "source": "/ruta-seda-espacial", "destination": "/dossier-ruta-seda-espacial.html" }
   ],
   "redirects": [
     { "source": "/nosotros", "destination": "/about", "permanent": true },
