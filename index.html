@@ -20,12 +20,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bundle.css">
   <style>
-    .hero-section {
-      background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1800&q=75&auto=format&fit=crop');
-      background-size:cover; background-position:center right;
+    /* ===== HERO: fondo de marca (sin imagen externa) ===== */
+    .hero-section{
+      background:
+        radial-gradient(120% 90% at 78% 18%, rgba(138,43,226,0.30) 0%, transparent 55%),
+        radial-gradient(120% 90% at 88% 70%, rgba(0,201,255,0.22) 0%, transparent 55%),
+        radial-gradient(140% 120% at 12% 8%, rgba(0,201,255,0.10) 0%, transparent 50%),
+        linear-gradient(160deg, #071528 0%, #0A1A2F 45%, #06101f 100%);
     }
-    .hero-section::after { content:""; position:absolute; inset:0; background:linear-gradient(105deg,rgba(10,26,47,0.86) 28%,rgba(10,26,47,0.40) 70%,rgba(10,26,47,0.18) 100%); z-index:0; pointer-events:none; }
-    .hero-copy { position:relative; z-index:2; }
+    /* Campo de estrellas en capas */
+    .hero-stars{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+    .hero-stars::before,.hero-stars::after{
+      content:"";position:absolute;inset:-50%;
+      background-image:
+        radial-gradient(1.4px 1.4px at 20% 30%, rgba(255,255,255,0.9) 50%, transparent),
+        radial-gradient(1.2px 1.2px at 65% 12%, rgba(255,255,255,0.7) 50%, transparent),
+        radial-gradient(1.6px 1.6px at 80% 55%, rgba(0,201,255,0.8) 50%, transparent),
+        radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,0.7) 50%, transparent),
+        radial-gradient(1.3px 1.3px at 50% 45%, rgba(255,255,255,0.6) 50%, transparent),
+        radial-gradient(1.1px 1.1px at 90% 85%, rgba(138,43,226,0.8) 50%, transparent),
+        radial-gradient(1px 1px at 12% 60%, rgba(255,255,255,0.5) 50%, transparent);
+      background-repeat:repeat;background-size:420px 420px;
+      animation:heroDrift 90s linear infinite;opacity:0.55;
+    }
+    .hero-stars::after{background-size:680px 680px;opacity:0.35;animation-duration:140s;animation-direction:reverse}
+    @keyframes heroDrift{from{transform:translate(0,0)}to{transform:translate(-420px,-420px)}}
+    /* Aurora suave que respira */
+    .hero-aurora{position:absolute;inset:0;z-index:0;pointer-events:none;
+      background:
+        radial-gradient(40% 60% at 75% 35%, rgba(0,201,255,0.16) 0%, transparent 70%),
+        radial-gradient(45% 55% at 85% 65%, rgba(138,43,226,0.18) 0%, transparent 70%);
+      filter:blur(6px);animation:heroPulse 12s ease-in-out infinite alternate}
+    @keyframes heroPulse{from{opacity:0.6;transform:scale(1)}to{opacity:1;transform:scale(1.06)}}
+    @media (prefers-reduced-motion: reduce){
+      .hero-stars::before,.hero-stars::after,.hero-aurora{animation:none}
+    }
+    .hero-copy { position:relative; z-index:3; }
     .img-wrap { position:relative; border-radius:8px; overflow:hidden; }
     .img-wrap img { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(0.5) brightness(0.6); transition:filter 0.35s; }
     .img-wrap:hover img { filter:saturate(0.7) brightness(0.75); }
@@ -73,6 +103,8 @@
 
 <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
 <section id="hero" class="hero-section">
+  <div class="hero-stars" aria-hidden="true"></div>
+  <div class="hero-aurora" aria-hidden="true"></div>
   <canvas id="hero-canvas" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.12;pointer-events:none;z-index:1"></canvas>
   <div class="hero-copy">
     <span class="hero-eyebrow">Estrategia · Innovación · Conocimiento</span>
@@ -80,11 +112,12 @@
     <p class="hero-sub">Convertimos el análisis de tendencias globales en decisiones concretas. Consultoría estratégica, innovación aplicada y contenido de alto impacto para gobiernos, empresas y organizaciones de América Latina.</p>
     <div class="hero-ctas">
       <a href="neolab.html" class="btn-hero">EXPLORAR SERVICIOS</a>
+      <a href="newsletter.html" class="btn-outline">SUSCRÍBETE AL NEWSLETTER</a>
       <a href="about.html" class="btn-ghost">QUIÉNES SOMOS</a>
     </div>
   </div>
   <div class="hero-art" aria-hidden="true">
-    <img src="assets/images/planeta-latam.svg" alt="" draggable="false" loading="eager" style="width:min(46vw,560px);max-width:none;opacity:0.95;filter:drop-shadow(0 0 60px rgba(0,201,255,0.25))">
+    <img src="assets/images/planeta-latam.svg" alt="" draggable="false" loading="eager" style="opacity:0.96;filter:drop-shadow(0 0 70px rgba(0,201,255,0.30))">
   </div>
 </section>
 
@@ -344,6 +377,7 @@
         <a href="neoeventos.html" class="nav-link">NEOEVENTOS</a>
         <a href="research.html" class="nav-link">INVESTIGACIÓN</a>
         <a href="about.html" class="nav-link">NOSOTROS</a>
+        <a href="newsletter.html" class="nav-link">NEWSLETTER</a>
       </div>
     </div>
     <!-- Columna 4: Redes -->
