@@ -1578,3 +1578,62 @@ input, textarea, select {
 
 /* Indicador de página activa en el navbar */
 .nav-link--active{color:var(--cyan)!important;opacity:1}
+
+/* ═══════════════════════════════════════════════════════════════
+   WhatsApp flotante (FASE 10A)
+   ═══════════════════════════════════════════════════════════════ */
+.wa-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.45);
+  transition: transform 0.25s ease;
+}
+
+.wa-float:hover {
+  transform: scale(1.08);
+}
+
+.wa-float::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.5);
+  animation: waRing 2s infinite;
+}
+
+@keyframes waRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-float::after {
+    animation: none;
+  }
+}
+
+/* Evita que tape el footer en móvil */
+@media (max-width: 560px) {
+  .wa-float {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+  }
+}
