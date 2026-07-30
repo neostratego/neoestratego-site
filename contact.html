@@ -61,6 +61,12 @@
         <span class="section-label">ESCRÍBENOS</span>
         <h2 class="section-heading" style="margin-bottom:2rem">El formulario<br>que sí funciona.</h2>
         <form id="contact-form" class="contact-form" novalidate>
+          <!-- Campos ocultos UTM (FASE 6) -->
+          <input type="hidden" name="utm_source" id="cf-utm-source" value="">
+          <input type="hidden" name="utm_medium" id="cf-utm-medium" value="">
+          <input type="hidden" name="utm_campaign" id="cf-utm-campaign" value="">
+          <input type="hidden" name="utm_content" id="cf-utm-content" value="">
+          
           <div class="form-field"><label class="form-label" for="cf-name">Nombre completo *</label><input type="text" id="cf-name" class="form-input" placeholder="Tu nombre completo" required><span class="form-error">Este campo es obligatorio.</span></div>
           <div class="form-field"><label class="form-label" for="cf-email">Correo electrónico *</label><input type="email" id="cf-email" class="form-input" placeholder="tu@email.com" required><span class="form-error">Introduce un email válido.</span></div>
           <div class="form-field"><label class="form-label" for="cf-org">Organización</label><input type="text" id="cf-org" class="form-input" placeholder="Empresa, gobierno u organización"></div>
@@ -78,6 +84,50 @@
           <div class="form-field"><label class="form-label" for="cf-msg">Mensaje *</label><textarea id="cf-msg" class="form-textarea" rows="5" placeholder="Describe tu proyecto. Entre más detalle, mejor respuesta." required></textarea><span class="form-error">Describe tu proyecto.</span></div>
           <button type="submit" class="btn-hero">ENVIAR MENSAJE</button>
         </form>
+        <script>
+        // FASE 6: Capturar UTM de la URL y pre-rellenar campos ocultos
+        (function(){
+          const params = new URLSearchParams(window.location.search);
+          const utmFields = {utm_source:'cf-utm-source', utm_medium:'cf-utm-medium', utm_campaign:'cf-utm-campaign', utm_content:'cf-utm-content'};
+          Object.keys(utmFields).forEach(function(key){
+            var val = params.get(key) || '';
+            if(val) document.getElementById(utmFields[key]).value = val;
+          });
+          // Si hay utm_content en la URL, usarlo para pre-seleccionar servicio
+          var utmContent = params.get('utm_content');
+          if(utmContent){
+            var svcMap = {'CINEMA':'Producción CINEMA','PRO':'Producción PRO','ESSENTIAL':'Producción ESSENTIAL','MOBILE':'Producción MOBILE','ALIANZA':'Alianzas Estratégicas','BRONCE':'Patrocinio Bronce','PLATA':'Patrocinio Plata','ORO':'Patrocinio Oro','NEOPLATINUM':'Patrocinio Neoplatinum'};
+            if(svcMap[utmContent]){
+              var sel = document.getElementById('cf-service');
+              for(var i=0;i<sel.options.length;i++){
+                if(sel.options[i].text.indexOf(svcMap[utmContent])!==-1){sel.selectedIndex=i;break;}
+              }
+            }
+          }
+        })();
+        
+        // Fallback a WhatsApp si falla el envío
+        document.getElementById('contact-form').addEventListener('submit', function(e){
+          e.preventDefault();
+          var name = document.getElementById('cf-name').value.trim();
+          var email = document.getElementById('cf-email').value.trim();
+          var org = document.getElementById('cf-org').value.trim();
+          var service = document.getElementById('cf-service').value;
+          var msg = document.getElementById('cf-msg').value.trim();
+          var utmContent = document.getElementById('cf-utm-content').value;
+          
+          // Disparar evento analytics (si existe)
+          if(typeof gtag === 'function'){ gtag('event','form_submit',{event_category:'contact',event_label:service}); }
+          
+          // Fallback: abrir WhatsApp con mensaje pre-armado
+          var waText = encodeURIComponent('Hola, soy '+name+(org?' de '+org:'')+'. Quiero info sobre: '+service+'. '+(msg?'\nMensaje: '+msg:'')+(utmContent?' (UTM: '+utmContent+')':''));
+          window.open('https://wa.me/593958824142?text='+waText,'_blank');
+          
+          // Mostrar mensaje de éxito
+          document.getElementById('contact-success').style.display = 'block';
+          this.reset();
+        });
+        </script>
         <div id="contact-success" class="form-success"><p style="font-family:var(--font-display);font-size:1.3rem;color:var(--cyan-light);margin-bottom:0.5rem">Mensaje recibido.</p><p>Gracias. Respondemos en 48h a <a href="mailto:estrategia@neostratego.com" style="color:var(--cyan)">estrategia@neostratego.com</a></p></div>
       </div>
       <div>
