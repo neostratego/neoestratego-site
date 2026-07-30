@@ -1,0 +1,40 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#071528"/>
+      <stop offset="50%" style="stop-color:#0A1A2F"/>
+      <stop offset="100%" style="stop-color:#06101f"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Decorative gradients -->
+  <radialGradient id="grad1" cx="75%" cy="20%" r="40%">
+    <stop offset="0%" style="stop-color:rgba(138,43,226,0.25);stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:rgba(138,43,226,0);stop-opacity:0"/>
+  </radialGradient>
+  <ellipse cx="900" cy="126" rx="480" ry="252" fill="url(#grad1)"/>
+  
+  <radialGradient id="grad2" cx="85%" cy="70%" r="35%">
+    <stop offset="0%" style="stop-color:rgba(0,201,255,0.20);stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:rgba(0,201,255,0);stop-opacity:0"/>
+  </radialGradient>
+  <ellipse cx="1020" cy="441" rx="420" ry="220" fill="url(#grad2)"/>
+  
+  <!-- Main title -->
+  <text x="600" y="280" font-family="'Playfair Display', serif" font-size="72" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">NEOSTRATEGO</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="340" font-family="'Inter', sans-serif" font-size="28" font-weight="300" fill="#00C9FF" text-anchor="middle" letter-spacing="4">ESTRATEGIA · INNOVACIÓN · CONOCIMIENTO</text>
+  
+  <!-- Locations -->
+  <text x="600" y="420" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">Quito · Buenos Aires · São Paulo</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="470" font-family="'Inter', sans-serif" font-size="20" font-weight="300" fill="#B8B8D0" text-anchor="middle">Inteligencia geoeconómica desde LATAM</text>
+  
+  <!-- Bottom accent line -->
+  <line x1="300" y1="520" x2="900" y2="520" stroke="#00C9FF" stroke-width="2" opacity="0.6"/>
+</svg>

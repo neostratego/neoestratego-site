@@ -10,14 +10,18 @@
   <meta property="og:description" content="Transformamos el análisis global en decisiones inteligentes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://neostratego.com">
-  
-  <!-- hreflang (FASE 4) -->
-  <link rel="alternate" hreflang="es-EC" href="https://neostratego.com/ec/" />
-  <link rel="alternate" hreflang="es-AR" href="https://neostratego.com/ar/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://neostratego.com/br/" />
-  <link rel="alternate" hreflang="x-default" href="https://neostratego.com/" />
-  
-  <!-- JSON-LD Organization + Offer (FASE 4) -->
+  <meta property="og:image" content="https://neostratego.com/assets/images/og.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:locale:alternate" content="es_AR">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEOSTRATEGO | Inteligencia geoeconómica desde LATAM">
+  <meta name="twitter:description" content="Consultoría, innovación y narrativa transmedia. Quito · Buenos Aires · São Paulo.">
+  <meta name="twitter:image" content="https://neostratego.com/assets/images/og.svg">
+
+  <!-- JSON-LD Organization + Offer (FASE 4 + FIX FASE 7) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,11 +38,15 @@
         },
         "email": "estrategia@neostratego.com",
         "areaServed": ["EC", "AR", "BR", "LATAM"],
-        "address": [
+        "location": [
           {
-            "@type": "PostalAddress",
-            "addressLocality": "Quito",
-            "addressCountry": "EC",
+            "@type": "Place",
+            "name": "Sede Quito (HQ)",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Quito",
+              "addressCountry": "EC"
+            },
             "geo": {
               "@type": "GeoCoordinates",
               "latitude": "-0.1807",
@@ -46,14 +54,22 @@
             }
           },
           {
-            "@type": "PostalAddress",
-            "addressLocality": "Buenos Aires",
-            "addressCountry": "AR"
+            "@type": "Place",
+            "name": "Sede Buenos Aires",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Buenos Aires",
+              "addressCountry": "AR"
+            }
           },
           {
-            "@type": "PostalAddress",
-            "addressLocality": "São Paulo",
-            "addressCountry": "BR"
+            "@type": "Place",
+            "name": "Sede São Paulo (próximamente)",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "São Paulo",
+              "addressCountry": "BR"
+            }
           }
         ]
       },

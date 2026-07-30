@@ -6,6 +6,163 @@
   <title>Ruta de la Seda Espacial — Dossier de Producción | NEOMEDIA</title>
   <meta name="description" content="Dossier de producción transmedia: documental cinematográfico y podcast de larga duración sobre el talento latinoamericano y caribeño en el cosmos. Temporada I.">
   <meta name="theme-color" content="#0A1A2F">
+  
+  <!-- Open Graph + Twitter Card (FASE 7) -->
+  <meta property="og:image" content="https://neostratego.com/assets/images/og.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:locale:alternate" content="es_AR">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ruta de la Seda Espacial | Dossier NEOMEDIA">
+  <meta name="twitter:description" content="Documental y podcast sobre talento latinoamericano en el cosmos. Patrocinios disponibles.">
+  <meta name="twitter:image" content="https://neostratego.com/assets/images/og.svg">
+
+  <!-- JSON-LD Organization + Offer (FASE 4 + FIX FASE 7) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://neostratego.com/#organization",
+        "name": "NEOSTRATEGO",
+        "alternateName": ["NeoMedia", "NeoLab", "NeoEventos"],
+        "url": "https://neostratego.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://neostratego.com/assets/images/favicon.svg"
+        },
+        "email": "estrategia@neostratego.com",
+        "areaServed": ["EC", "AR", "BR", "LATAM"],
+        "location": [
+          {
+            "@type": "Place",
+            "name": "Sede Quito (HQ)",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Quito",
+              "addressCountry": "EC"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "-0.1807",
+              "longitude": "-78.4678"
+            }
+          },
+          {
+            "@type": "Place",
+            "name": "Sede Buenos Aires",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Buenos Aires",
+              "addressCountry": "AR"
+            }
+          },
+          {
+            "@type": "Place",
+            "name": "Sede São Paulo (próximamente)",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "São Paulo",
+              "addressCountry": "BR"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "@id": "https://neostratego.com/#offers",
+        "name": "Servicios y Patrocinios NeoStratego",
+        "numberOfItems": 8,
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Patrocinio Bronce"
+            },
+            "price": "500",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Patrocinio Plata"
+            },
+            "price": "2500",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Patrocinio Oro"
+            },
+            "price": "5000",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Patrocinio Neoplatinum"
+            },
+            "price": "10000",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Producción CINEMA"
+            },
+            "price": "10000",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Producción PRO"
+            },
+            "price": "5000",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Producción ESSENTIAL"
+            },
+            "price": "2500",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Producción MOBILE"
+            },
+            "price": "500",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
