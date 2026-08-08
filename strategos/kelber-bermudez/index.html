@@ -27,31 +27,37 @@
 </head>
 <body class="min-h-screen selection:bg-[#00f0ff] selection:text-[#0a0a1a]">
 
-    <!-- 1. HERO: Fondo China-LatAm (Overlay Corregido) -->
+    <!-- 1. HERO: Imagen Original de Conexión Global -->
     <section class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-        <!-- Imagen de fondo -->
+        <!-- Imagen de fondo (URL directa de Unsplash: Puerto/Comercio Global) -->
         <div class="absolute inset-0 z-0">
-            <img src="https://raw.githubusercontent.com/neostratego/neoestratego-site/main/strategos/kelber-bermudez/china-latam.jpg" 
-                 alt="Conexión China Latinoamérica" 
+            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Conexión Comercial Global" 
                  class="w-full h-full object-cover animate-slow-zoom">
-            <!-- Overlay más transparente para ver la foto (antes era 90%, ahora 50%) -->
-            <div class="absolute inset-0 bg-[#0a0a1a]/50"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/80 via-transparent to-[#0a0a1a]"></div>
+            <!-- Overlay oscuro para legibilidad -->
+            <div class="absolute inset-0 bg-[#0a0a1a]/60"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/90 via-transparent to-[#0a0a1a]"></div>
         </div>
         
-        <!-- Contenido Hero (Z-Index alto para estar encima de la foto) -->
+        <!-- Contenido Hero -->
         <div class="relative z-20 text-center max-w-5xl mx-auto space-y-8 mt-20">
-            <p class="text-[#00f0ff] tracking-[0.4em] text-xs md:text-sm uppercase font-medium drop-shadow-md">NeoStratego Strategos · RI & Geoeconomía</p>
             
-            <!-- Título con sombra fuerte para leerse sobre la foto -->
+            <!-- Etiqueta Superior -->
+            <p class="text-[#00f0ff] tracking-[0.3em] text-xs md:text-sm uppercase font-bold drop-shadow-md border border-[#00f0ff]/30 px-4 py-1 rounded-full inline-block bg-[#0a0a1a]/40 backdrop-blur-sm">
+                ESTRATEGIA LEGAL · GEOPOLÍTICA · INVERSIÓN
+            </p>
+            
+            <!-- Título Principal -->
             <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight gradient-text drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]">
                 KELBER BERMÚDEZ
             </h1>
             
-            <p class="text-xl md:text-2xl text-gray-200 italic font-light drop-shadow-md">"Conectando Sudamérica y China"</p>
+            <!-- Subtítulo Actualizado -->
+            <p class="text-xl md:text-2xl text-gray-200 italic font-light drop-shadow-md">
+                "Conectando Suramérica y China"
+            </p>
             
             <div class="pt-12">
-                <!-- BOTÓN CORREGIDO: Fondo visible y texto blanco -->
                 <a href="#contacto" class="inline-block bg-[#0a0a1a]/60 backdrop-blur-md border border-[#00f0ff] text-white px-10 py-4 rounded-full hover:bg-[#00f0ff] hover:text-[#0a0a1a] hover:border-[#00f0ff] transition-all duration-300 tracking-widest text-sm uppercase shadow-[0_0_20px_rgba(0,240,255,0.4)] font-bold">
                     Iniciar Conversación
                 </a>
@@ -59,7 +65,7 @@
         </div>
     </section>
 
-    <!-- 2. LA VISIÓN: Foto de Perfil -->
+    <!-- 2. LA VISIÓN: Foto de Perfil + Nueva Frase -->
     <section class="py-32 px-6 bg-[#0a0a1a] relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-8">
             <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-[#00f0ff] shadow-[0_0_30px_rgba(0,240,255,0.3)] mb-8 bg-[#1a1a3a]">
@@ -69,7 +75,12 @@
             </div>
             
             <div class="w-12 h-1 bg-gradient-to-r from-[#00f0ff] to-[#7b2fff] mx-auto mb-12"></div>
-            <blockquote class="text-3xl md:text-4xl leading-relaxed text-gray-200">"En un mundo multipolar, la estrategia legal es el nuevo lenguaje del poder."</blockquote>
+            
+            <!-- FRASE DE KELBER ACTUALIZADA -->
+            <blockquote class="text-2xl md:text-3xl leading-relaxed text-gray-200 font-serif">
+                "En un mundo en constante transformación: la confianza, la certeza y el profesionalismo garantizan el éxito en todo acto humano."
+            </blockquote>
+            
             <cite class="block text-sm text-[#00f0ff] tracking-widest uppercase not-italic mt-8">— Kelber Bermúdez</cite>
         </div>
     </section>
