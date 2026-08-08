@@ -3,158 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelber Bermúdez | Strategos · RI & Geoeconomía - NeoStratego</title>
-    <!-- Tailwind CSS -->
+    <title>Kelber & Kelber Abogados | Firma Jurídica Institucional</title>
+    <meta name="description" content="Kelber & Kelber Abogados. Firma jurídica con solidez institucional en Guayaquil y Quito. Derecho corporativo, litigios complejos y asesoría internacional.">
+    
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="Kelber & Kelber Abogados">
+    <meta property="og:description" content="Solidez jurídica, alcance internacional, confianza institucional. Guayaquil • Quito • Ecuador">
+    <meta property="og:type" content="website">
+    <!-- [EDITAR IMAGEN OG] Reemplaza TU_USUARIO con tu usuario real de GitHub cuando subas el logo PNG -->
+    <meta property="og:image" content="https://raw.githubusercontent.com/TU_USUARIO/kelberykelber.github.io/main/assets/img/logo-kk.png">
+    
+    <!-- Favicon Dorado (SVG inline - no requiere archivo externo) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23C9A84C%22>⚖</text></svg>">
+
+    <!-- Fuentes Google: Pinyon Script (Logo) + Cormorant Garamond (Subtítulos) + Lato (Cuerpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lato:wght@300;400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fuentes Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kk-bg': '#0a0a12',
+                        'kk-bg-alt': '#111118',
+                        'kk-gold': '#C9A84C',
+                        'kk-gold-light': '#E2C97E',
+                        'kk-gold-dark': '#8B7332',
+                        'kk-text': '#F5F0E8',
+                        'kk-text-muted': '#9A9484',
+                    },
+                    fontFamily: {
+                        'script': ['"Pinyon Script"', 'cursive'],
+                        'serif': ['"Cormorant Garamond"', 'serif'],
+                        'sans': ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0a0a1a; color: white; }
-        h1, h2, h3, blockquote, cite { font-family: 'Playfair Display', serif; }
-        .gradient-text {
-            background: linear-gradient(to right, #00f0ff, #ffffff, #7b2fff);
+        body { 
+            background-color: #0a0a12; 
+            color: #F5F0E8; 
+            scroll-behavior: smooth; 
+        }
+        
+        /* Logo Tipográfico con Gradiente Dorado Metálico */
+        .logo-script {
+            font-family: 'Pinyon Script', cursive;
+            background: linear-gradient(to bottom, #C9A84C 0%, #F3E5AB 45%, #B8960B 55%, #E2C97E 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0px 2px 8px rgba(201, 168, 76, 0.2));
         }
-        /* Animación suave para el fondo */
-        @keyframes slow-zoom {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        .logo-serif {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(to bottom, #C9A84C, #8B7332);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        .animate-slow-zoom { animation: slow-zoom 20s infinite ease-in-out; }
+        
+        /* Separador dorado sutil */
+        .gold-divider { 
+            height: 1px; 
+            background: linear-gradient(to right, transparent, #C9A84C, transparent); 
+        }
+        
+        /* Hover suave para enlaces de navegación */
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; 
+            position: absolute; 
+            width: 0; 
+            height: 1px; 
+            bottom: -4px; 
+            left: 0;
+            background-color: #E2C97E; 
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        
+        /* Efecto grayscale a color en fotos de socios */
+        .socio-img {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+        .socio-card:hover .socio-img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
     </style>
 </head>
-<body class="min-h-screen selection:bg-[#00f0ff] selection:text-[#0a0a1a]">
+<body class="font-sans antialiased selection:bg-kk-gold/30 selection:text-kk-gold-light">
 
-    <!-- 1. HERO: Imagen Original de Conexión Global -->
-    <section class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-        <!-- Imagen de fondo (URL directa de Unsplash: Puerto/Comercio Global) -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" 
-                 alt="Conexión Comercial Global" 
-                 class="w-full h-full object-cover animate-slow-zoom">
-            <!-- Overlay oscuro para legibilidad -->
-            <div class="absolute inset-0 bg-[#0a0a1a]/60"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/90 via-transparent to-[#0a0a1a]"></div>
+    <!-- HEADER / NAVEGACIÓN FIJA -->
+    <header class="fixed top-0 w-full z-50 bg-kk-bg/90 backdrop-blur-md border-b border-kk-gold/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Header (Pequeño) -->
+            <a href="#" class="flex flex-col leading-none group">
+                <span class="logo-script text-2xl md:text-3xl block group-hover:opacity-90 transition">Kelber & Kelber</span>
+                <span class="logo-serif text-[0.6rem] md:text-xs tracking-[0.3em] ml-[0.3em] block mt-0.5">ABOGADOS</span>
+            </a>
+            
+            <!-- Menú Desktop -->
+            <nav class="hidden md:flex gap-8 text-xs uppercase tracking-[0.2em] text-kk-text-muted font-medium">
+                <a href="#firma" class="nav-link hover:text-kk-gold-light transition-colors">La Firma</a>
+                <a href="#socios" class="nav-link hover:text-kk-gold-light transition-colors">Socios</a>
+                <a href="#areas" class="nav-link hover:text-kk-gold-light transition-colors">Áreas</a>
+                <a href="#casos" class="nav-link hover:text-kk-gold-light transition-colors">Casos</a>
+                <a href="#alianzas" class="nav-link hover:text-kk-gold-light transition-colors">Red Global</a>
+                <a href="#contacto" class="nav-link hover:text-kk-gold-light transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Teléfono Real Actualizado -->
+            <a href="tel:+593958824142" class="hidden lg:block text-sm text-kk-text-muted hover:text-kk-gold-light transition tracking-wide">
+                +593 95 882 4142
+            </a>
         </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Fondo con overlay oscuro -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-15" 
+             style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop');">
+        </div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-kk-bg/80 via-kk-bg/90 to-kk-bg"></div>
         
-        <!-- Contenido Hero -->
-        <div class="relative z-20 text-center max-w-5xl mx-auto space-y-8 mt-20">
-            
-            <!-- Etiqueta Superior -->
-            <p class="text-[#00f0ff] tracking-[0.3em] text-xs md:text-sm uppercase font-bold drop-shadow-md border border-[#00f0ff]/30 px-4 py-1 rounded-full inline-block bg-[#0a0a1a]/40 backdrop-blur-sm">
-                ESTRATEGIA LEGAL · GEOPOLÍTICA · INVERSIÓN
-            </p>
-            
-            <!-- Título Principal -->
-            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight gradient-text drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]">
-                KELBER BERMÚDEZ
-            </h1>
-            
-            <!-- Subtítulo Actualizado -->
-            <p class="text-xl md:text-2xl text-gray-200 italic font-light drop-shadow-md">
-                "Conectando Suramérica y China"
-            </p>
-            
-            <div class="pt-12">
-                <a href="#contacto" class="inline-block bg-[#0a0a1a]/60 backdrop-blur-md border border-[#00f0ff] text-white px-10 py-4 rounded-full hover:bg-[#00f0ff] hover:text-[#0a0a1a] hover:border-[#00f0ff] transition-all duration-300 tracking-widest text-sm uppercase shadow-[0_0_20px_rgba(0,240,255,0.4)] font-bold">
-                    Iniciar Conversación
-                </a>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-8">
+            <!-- Logo Grande Central -->
+            <div class="space-y-2">
+                <h1 class="logo-script text-6xl md:text-8xl lg:text-9xl leading-tight">Kelber & Kelber</h1>
+                <h2 class="logo-serif text-xl md:text-3xl tracking-[0.35em] ml-[0.35em] font-medium">ABOGADOS</h2>
             </div>
+            
+            <div class="gold-divider w-32 mx-auto my-8"></div>
+            
+            <p class="text-lg md:text-xl uppercase tracking-[0.25em] text-kk-text-muted font-light">
+                Derecho Nacional e Internacional
+            </p>
+            
+            <div class="pt-4 text-sm tracking-[0.3em] text-kk-text-muted/60 space-y-1">
+                <p>GUAYAQUIL – QUITO</p>
+                <p>ECUADOR</p>
+            </div>
+            
+            <a href="#contacto" class="inline-block mt-8 px-8 py-3 border border-kk-gold/40 text-kk-gold-light text-xs uppercase tracking-[0.2em] hover:bg-kk-gold/10 hover:border-kk-gold transition-all duration-300">
+                Agendar Consulta
+            </a>
         </div>
     </section>
 
-    <!-- 2. LA VISIÓN: Foto de Perfil + Nueva Frase -->
-    <section class="py-32 px-6 bg-[#0a0a1a] relative z-10">
+    <!-- LA FIRMA -->
+    <section id="firma" class="py-24 px-6 bg-kk-bg-alt">
         <div class="max-w-4xl mx-auto text-center space-y-8">
-            <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-[#00f0ff] shadow-[0_0_30px_rgba(0,240,255,0.3)] mb-8 bg-[#1a1a3a]">
-                <img src="https://raw.githubusercontent.com/neostratego/neoestratego-site/main/strategos/kelber-bermudez/kelber-perfil.jpg" 
-                     alt="Kelber Bermúdez" 
-                     class="w-full h-full object-cover">
-            </div>
-            
-            <div class="w-12 h-1 bg-gradient-to-r from-[#00f0ff] to-[#7b2fff] mx-auto mb-12"></div>
-            
-            <!-- FRASE DE KELBER ACTUALIZADA -->
-            <blockquote class="text-2xl md:text-3xl leading-relaxed text-gray-200 font-serif">
-                "En un mundo en constante transformación: la confianza, la certeza y el profesionalismo garantizan el éxito en todo acto humano."
-            </blockquote>
-            
-            <cite class="block text-sm text-[#00f0ff] tracking-widest uppercase not-italic mt-8">— Kelber Bermúdez</cite>
+            <h3 class="logo-serif text-3xl md:text-4xl text-kk-gold tracking-wide">La Firma</h3>
+            <p class="text-kk-text-muted leading-relaxed text-lg font-light">
+                Kelber & Kelber Abogados nace de la convicción de que la excelencia jurídica requiere estructura, continuidad y visión institucional. No somos una práctica individual; somos una firma diseñada para respaldar decisiones de alto impacto con rigor técnico, discreción absoluta y alcance transfronterizo.
+            </p>
+            <p class="text-kk-text-muted/80 leading-relaxed">
+                Nuestra filosofía se basa en tres pilares: <span class="text-kk-gold-light">Solidez Patrimonial</span>, <span class="text-kk-gold-light">Precisión Técnica</span> y <span class="text-kk-gold-light">Confianza Generacional</span>. Atendemos a familias empresarias, corporaciones multinacionales e instituciones que requieren más que asesoría legal: requieren un socio estratégico permanente.
+            </p>
         </div>
     </section>
 
-    <!-- 3. LIDERAZGO: Foto con Ejecutivos -->
-    <section class="py-24 px-6 bg-[#0d0d20] relative z-10">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6 order-2 md:order-1">
-                <h2 class="text-4xl md:text-5xl font-serif text-white">Alianzas Estratégicas</h2>
-                <p class="text-gray-400 text-lg leading-relaxed">
-                    La diplomacia corporativa moderna requiere conexiones genuinas con líderes globales. Nuestra red abarca gobiernos, cámaras de comercio y corporaciones multinacionales en Asia y América Latina.
-                </p>
-                <div class="flex gap-6 pt-4">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-[#00f0ff]">15+</div>
-                        <div class="text-xs text-gray-500 uppercase tracking-wider">Países</div>
+    <!-- SOCIOS / LEADERSHIP -->
+    <section id="socios" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h3 class="logo-serif text-3xl md:text-4xl text-kk-gold tracking-wide">Socios</h3>
+                <p class="text-kk-text-muted font-light max-w-2xl mx-auto">Leadership con experiencia comprobada en jurisdicciones locales e internacionales.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Socio 1 -->
+                <div class="socio-card text-center space-y-4 group">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-kk-gold/20 group-hover:border-kk-gold/50 transition-all duration-500">
+                        <!-- [EDITAR IMAGEN SOCIO 1] Reemplaza URL con ruta absoluta raw de tu imagen -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" 
+                             alt="Socio Director Kelber & Kelber" 
+                             class="socio-img w-full h-full object-cover">
                     </div>
-                    <div class="w-px bg-white/10"></div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-[#00f0ff]">200+</div>
-                        <div class="text-xs text-gray-500 uppercase tracking-wider">Alianzas</div>
-                    </div>
+                    <h4 class="font-serif text-2xl text-kk-text">Dr. [Nombre] Kelber</h4>
+                    <p class="text-kk-gold text-sm uppercase tracking-widest">Socio Director • Derecho Corporativo</p>
+                    <p class="text-kk-text-muted text-sm font-light leading-relaxed max-w-xs mx-auto">
+                        +20 años estructurando fusiones, adquisiciones y gobierno corporativo para grupos familiares y holdings regionales.
+                    </p>
                 </div>
-            </div>
-            <div class="rounded-lg overflow-hidden border border-white/10 shadow-2xl order-1 md:order-2 group">
-                <img src="https://raw.githubusercontent.com/neostratego/neoestratego-site/main/strategos/kelber-bermudez/kelber-ejecutivos.jpg" 
-                     alt="Kelber Bermúdez con ejecutivos" 
-                     class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. EXPERTISE GRID: 3 Módulos -->
-    <section class="py-24 px-6 bg-[#0a0a1a] relative z-10">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0d0d20] hover:-translate-y-2">
-                <div class="text-4xl mb-4 text-[#00f0ff]"></div>
-                <h3 class="text-2xl text-white mb-4 group-hover:text-[#00f0ff] transition-colors">Diplomacia Corporativa</h3>
-                <p class="text-gray-400 leading-relaxed font-light">Estructuración jurídica para alianzas transfronterizas y negociación de alto nivel.</p>
-            </div>
-            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0d0d20] hover:-translate-y-2">
-                <div class="text-4xl mb-4 text-[#00f0ff]">⚖️</div>
-                <h3 class="text-2xl text-white mb-4 group-hover:text-[#00f0ff] transition-colors">Arbitraje Internacional</h3>
-                <p class="text-gray-400 leading-relaxed font-light">Resolución de disputas complejas bajo estándares globales y tratados bilaterales.</p>
-            </div>
-            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0d0d20] hover:-translate-y-2">
-                <div class="text-4xl mb-4 text-[#00f0ff]"></div>
-                <h3 class="text-2xl text-white mb-4 group-hover:text-[#00f0ff] transition-colors">Inteligencia de Mercados</h3>
-                <p class="text-gray-400 leading-relaxed font-light">Análisis geopolítico aplicado a la toma de decisiones de inversión en Asia-LatAm.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. CONTACTO: Correos Actualizados -->
-    <section id="contacto" class="py-32 px-6 bg-[#0a0a1a] border-t border-white/5 relative z-10">
-        <div class="max-w-3xl mx-auto text-center space-y-8">
-            <h2 class="text-4xl font-serif text-white">Acceso Exclusivo</h2>
-            <p class="text-gray-400 font-light">Para consultas estratégicas y asesoría confidencial.</p>
-            <div class="space-y-4 pt-8 text-sm text-gray-400 tracking-wide">
-                <p>QUITO · BUENOS AIRES · SÃO PAULO</p>
-                <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
-                    <a href="mailto:estrategia@neostratego.com" class="text-[#00f0ff] hover:text-white transition-colors underline decoration-[#00f0ff]/30 underline-offset-4">estrategia@neostratego.com</a>
-                    <span class="hidden md:inline text-gray-600">|</span>
-                    <a href="mailto:icd@neostratego.com" class="text-[#00f0ff] hover:text-white transition-colors underline decoration-[#00f0ff]/30 underline-offset-4">icd@neostratego.com</a>
+                
+                <!-- Socio 2 -->
+                <div class="socio-card text-center space-y-4 group">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-kk-gold/20 group-hover:border-kk-gold/50 transition-all duration-500">
+                        <!-- [EDITAR IMAGEN SOCIO 2] Reemplaza URL con ruta absoluta raw de tu imagen -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" 
+                             alt="Socia Senior Kelber & Kelber" 
+                             class="socio-img w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-serif text-2xl text-kk-text">Dra. [Nombre] Kelber</h4>
+                    <p class="text-kk-gold text-sm uppercase tracking-widest">Socia Senior • Litigio & Arbitraje</p>
+                    <p class="text-kk-text-muted text-sm font-light leading-relaxed max-w-xs mx-auto">
+                        Especialista en resolución de controversias complejas, arbitraje internacional y litigios comerciales de alta cuantía.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="py-12 text-center border-t border-white/5 text-xs text-gray-600 tracking-widest uppercase relative z-10">
-        © 2026 Kelber Bermúdez. Todos los derechos reservados. <br/>
-        <span class="opacity-50">Design by NeoStratego NEOLAB</span>
+    <!-- ÁREAS DE PRÁCTICA -->
+    <section id="areas" class="py-24 px-6 bg-kk-bg-alt">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h3 class="logo-serif text-3xl md:text-4xl text-kk-gold tracking-wide">Áreas de Práctica</h3>
+                <p class="text-kk-text-muted font-light">Capacidad multidisciplinaria para operaciones de escala.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-kk-gold/10 hover:border-kk-gold/30 transition-all duration-300 bg-kk-bg/50">
+                    <h4 class="font-serif text-xl text-kk-gold-light mb-3">Derecho Corporativo & M&A</h4>
+                    <p class="text-kk-text-muted text-sm font-light leading-relaxed">
+                        Estructuración societaria, fusiones y adquisiciones, joint ventures, gobierno corporativo y compliance institucional.
+                    </p>
+                </div>
+                <div class="p-8 border border-kk-gold/10 hover:border-kk-gold/30 transition-all duration-300 bg-kk-bg/50">
+                    <h4 class="font-serif text-xl text-kk-gold-light mb-3">Litigio & Arbitraje Internacional</h4>
+                    <p class="text-kk-text-muted text-sm font-light leading-relaxed">
+                        Defensa en controversias comerciales complejas, arbitraje bajo reglas CIAC, CCI y UNCITRAL, ejecución de laudos.
+                    </p>
+                </div>
+                <div class="p-8 border border-kk-gold/10 hover:border-kk-gold/30 transition-all duration-300 bg-kk-bg/50">
+                    <h4 class="font-serif text-xl text-kk-gold-light mb-3">Planificación Patrimonial & Sucesiones</h4>
+                    <p class="text-kk-text-muted text-sm font-light leading-relaxed">
+                        Protección de activos familiares, estructuras holding, protocolos de familia y sucesión generacional ordenada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS REPRESENTATIVOS -->
+    <section id="casos" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-12">
+            <h3 class="logo-serif text-3xl md:text-4xl text-kk-gold tracking-wide">Casos Representativos</h3>
+            <div class="space-y-8 text-left">
+                <div class="border-l-2 border-kk-gold/30 pl-6 py-2">
+                    <p class="text-kk-gold-light text-sm uppercase tracking-widest mb-2">Fusión Corporativa • 2025</p>
+                    <p class="text-kk-text-muted font-light">Asesoría integral en fusión de dos grupos industriales ecuatorianos con valoración conjunta superior a USD $80M. Estructuración fiscal, due diligence y cierre regulatorio.</p>
+                </div>
+                <div class="border-l-2 border-kk-gold/30 pl-6 py-2">
+                    <p class="text-kk-gold-light text-sm uppercase tracking-widest mb-2">Arbitraje Internacional • 2024</p>
+                    <p class="text-kk-text-muted font-light">Representación exitosa de cliente estatal en arbitraje comercial bajo reglas CCI. Controversia contractual resuelta con laudo favorable y recuperación de activos estratégicos.</p>
+                </div>
+                <div class="border-l-2 border-kk-gold/30 pl-6 py-2">
+                    <p class="text-kk-gold-light text-sm uppercase tracking-widest mb-2">Reestructuración Patrimonial • 2024</p>
+                    <p class="text-kk-text-muted font-light">Diseño e implementación de protocolo familiar y estructura holding para grupo empresarial de tercera generación, asegurando continuidad y minimización de conflictos sucesorios.</p>
+                </div>
+            </div>
+            <p class="text-xs text-kk-text-muted/50 italic">* Los casos han sido anonimizados conforme a estándares de confidencialidad profesional.</p>
+        </div>
+    </section>
+
+    <!-- ALIANZAS / RED GLOBAL -->
+    <section id="alianzas" class="py-24 px-6 bg-kk-bg-alt">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <h3 class="logo-serif text-3xl md:text-4xl text-kk-gold tracking-wide">Red Internacional</h3>
+            <p class="text-kk-text-muted font-light leading-relaxed max-w-2xl mx-auto">
+                Operamos con firmas aliadas verificadas en jurisdicciones clave, garantizando coordinación seamless para operaciones cross-border sin perder el control local.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6 pt-4">
+                <span class="px-4 py-2 border border-kk-gold/20 text-kk-text-muted text-sm tracking-wider">🇸 Miami</span>
+                <span class="px-4 py-2 border border-kk-gold/20 text-kk-text-muted text-sm tracking-wider">🇪🇸 Madrid</span>
+                <span class="px-4 py-2 border border-kk-gold/20 text-kk-text-muted text-sm tracking-wider">🇨🇴 Bogotá</span>
+                <span class="px-4 py-2 border border-kk-gold/20 text-kk-text-muted text-sm tracking-wider">🇵🇦 Panamá</span>
+                <span class="px-4 py-2 border border-kk-gold/20 text-kk-text-muted text-sm tracking-wider">🇬🇧 Londres</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <h3 class="logo-serif text-3xl md:text-4xl text-kk-gold tracking-wide">Contacto Institucional</h3>
+            <p class="text-kk-text-muted font-light">Atendemos exclusivamente con cita previa. Confidencialidad garantizada desde el primer contacto.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 pt-8 text-left max-w-2xl mx-auto">
+                <div class="space-y-2">
+                    <p class="text-kk-gold text-xs uppercase tracking-widest">Guayaquil</p>
+                    <p class="text-kk-text-muted text-sm font-light">Av. [Dirección], Edificio [Nombre], Piso [X]<br>Guayaquil, Ecuador</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-kk-gold text-xs uppercase tracking-widest">Quito</p>
+                    <p class="text-kk-text-muted text-sm font-light">Av. [Dirección], Edificio [Nombre], Piso [X]<br>Quito, Ecuador</p>
+                </div>
+            </div>
+            
+            <div class="pt-4 space-y-2">
+                <p class="text-kk-text-muted text-sm">✉️ contacto@kelberykelber.com</p>
+                <p class="text-kk-text-muted text-sm">📞 +593 95 882 4142</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER LEGAL -->
+    <footer class="border-t border-kk-gold/10 py-12 px-6 bg-kk-bg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-kk-text-muted/50">
+            <div class="text-center md:text-left">
+                <span class="logo-script text-xl block mb-1">Kelber & Kelber</span>
+                <span class="logo-serif text-[0.6rem] tracking-[0.3em]">ABOGADOS</span>
+            </div>
+            <div class="text-center space-y-1">
+                <p>&copy; 2026 Kelber & Kelber Abogados. Todos los derechos reservados.</p>
+                <p>Registro Profesional • Confidencialidad Abogado-Cliente • Política de Privacidad</p>
+            </div>
+            <div class="text-center md:text-right">
+                <p>Guayaquil • Quito • Ecuador</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP (Número Real Actualizado - Estilo dorado sutil) -->
+    <a href="https://wa.me/593958824142" target="_blank" rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp al +593 95 882 4142"
+       class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-kk-bg-alt/90 backdrop-blur border border-kk-gold/30 px-5 py-3 rounded-full hover:bg-kk-gold/10 hover:border-kk-gold transition-all duration-300 shadow-lg group">
+        <span class="text-xs uppercase tracking-widest text-kk-text-muted group-hover:text-kk-gold-light font-medium hidden sm:inline">Consultar</span>
+        <svg class="w-5 h-5 text-kk-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
 
 </body>
 </html>
