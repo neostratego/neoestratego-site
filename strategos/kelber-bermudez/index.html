@@ -27,27 +27,40 @@
 </head>
 <body class="min-h-screen selection:bg-[#00f0ff] selection:text-[#0a0a1a]">
 
-    <!-- 1. HERO: Fondo China-LatAm (Ruta Absoluta) -->
+    <!-- 1. HERO: Fondo China-LatAm (Overlay Corregido) -->
     <section class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+        <!-- Imagen de fondo -->
         <div class="absolute inset-0 z-0">
             <img src="https://raw.githubusercontent.com/neostratego/neoestratego-site/main/strategos/kelber-bermudez/china-latam.jpg" 
                  alt="Conexión China Latinoamérica" 
-                 class="w-full h-full object-cover opacity-40 animate-slow-zoom">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/90 via-[#0a0a1a]/60 to-[#0a0a1a]"></div>
+                 class="w-full h-full object-cover animate-slow-zoom">
+            <!-- Overlay más transparente para ver la foto (antes era 90%, ahora 50%) -->
+            <div class="absolute inset-0 bg-[#0a0a1a]/50"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/80 via-transparent to-[#0a0a1a]"></div>
         </div>
         
-        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8 mt-20">
-            <p class="text-[#00f0ff] tracking-[0.4em] text-xs md:text-sm uppercase font-medium">NeoStratego Strategos · RI & Geoeconomía</p>
-            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight gradient-text drop-shadow-2xl">KELBER BERMÚDEZ</h1>
-            <p class="text-xl md:text-2xl text-gray-300 italic font-light">"Conectando Sudamérica y China"</p>
+        <!-- Contenido Hero (Z-Index alto para estar encima de la foto) -->
+        <div class="relative z-20 text-center max-w-5xl mx-auto space-y-8 mt-20">
+            <p class="text-[#00f0ff] tracking-[0.4em] text-xs md:text-sm uppercase font-medium drop-shadow-md">NeoStratego Strategos · RI & Geoeconomía</p>
+            
+            <!-- Título con sombra fuerte para leerse sobre la foto -->
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight gradient-text drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]">
+                KELBER BERMÚDEZ
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-200 italic font-light drop-shadow-md">"Conectando Sudamérica y China"</p>
+            
             <div class="pt-12">
-                <a href="#contacto" class="inline-block border border-[#00f0ff] text-[#00f0ff] px-8 py-3 rounded-full hover:bg-[#00f0ff] hover:text-[#0a0a1a] transition-all duration-300 tracking-widest text-sm uppercase shadow-[0_0_20px_rgba(0,240,255,0.3)]">Iniciar Conversación</a>
+                <!-- BOTÓN CORREGIDO: Fondo visible y texto blanco -->
+                <a href="#contacto" class="inline-block bg-[#0a0a1a]/60 backdrop-blur-md border border-[#00f0ff] text-white px-10 py-4 rounded-full hover:bg-[#00f0ff] hover:text-[#0a0a1a] hover:border-[#00f0ff] transition-all duration-300 tracking-widest text-sm uppercase shadow-[0_0_20px_rgba(0,240,255,0.4)] font-bold">
+                    Iniciar Conversación
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 2. LA VISIÓN: Foto de Perfil (Ruta Absoluta) -->
-    <section class="py-32 px-6 bg-[#0a0a1a] relative">
+    <!-- 2. LA VISIÓN: Foto de Perfil -->
+    <section class="py-32 px-6 bg-[#0a0a1a] relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-8">
             <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-[#00f0ff] shadow-[0_0_30px_rgba(0,240,255,0.3)] mb-8 bg-[#1a1a3a]">
                 <img src="https://raw.githubusercontent.com/neostratego/neoestratego-site/main/strategos/kelber-bermudez/kelber-perfil.jpg" 
@@ -61,8 +74,8 @@
         </div>
     </section>
 
-    <!-- 3. LIDERAZGO: Foto con Ejecutivos (Ruta Absoluta) -->
-    <section class="py-24 px-6 bg-[#0d0d20]">
+    <!-- 3. LIDERAZGO: Foto con Ejecutivos -->
+    <section class="py-24 px-6 bg-[#0d0d20] relative z-10">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6 order-2 md:order-1">
                 <h2 class="text-4xl md:text-5xl font-serif text-white">Alianzas Estratégicas</h2>
@@ -90,7 +103,7 @@
     </section>
 
     <!-- 4. EXPERTISE GRID: 3 Módulos -->
-    <section class="py-24 px-6 bg-[#0a0a1a]">
+    <section class="py-24 px-6 bg-[#0a0a1a] relative z-10">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0d0d20] hover:-translate-y-2">
                 <div class="text-4xl mb-4 text-[#00f0ff]"></div>
@@ -111,7 +124,7 @@
     </section>
 
     <!-- 5. CONTACTO: Correos Actualizados -->
-    <section id="contacto" class="py-32 px-6 bg-[#0a0a1a] border-t border-white/5">
+    <section id="contacto" class="py-32 px-6 bg-[#0a0a1a] border-t border-white/5 relative z-10">
         <div class="max-w-3xl mx-auto text-center space-y-8">
             <h2 class="text-4xl font-serif text-white">Acceso Exclusivo</h2>
             <p class="text-gray-400 font-light">Para consultas estratégicas y asesoría confidencial.</p>
@@ -127,7 +140,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 text-center border-t border-white/5 text-xs text-gray-600 tracking-widest uppercase">
+    <footer class="py-12 text-center border-t border-white/5 text-xs text-gray-600 tracking-widest uppercase relative z-10">
         © 2026 Kelber Bermúdez. Todos los derechos reservados. <br/>
         <span class="opacity-50">Design by NeoStratego NEOLAB</span>
     </footer>
