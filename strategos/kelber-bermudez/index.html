@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelber Bermúdez | Strategos · RI & Geoeconomía - NeoStratego</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes Google -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0a0a1a; color: white; }
@@ -14,96 +16,111 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        /* Animación suave para el fondo */
+        @keyframes slow-zoom {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .animate-slow-zoom { animation: slow-zoom 20s infinite ease-in-out; }
     </style>
 </head>
 <body class="min-h-screen selection:bg-[#00f0ff] selection:text-[#0a0a1a]">
 
-      <!-- HERO CON FONDO CHINA-LATAM -->
-<section class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-    <!-- Imagen de fondo China-LatAm -->
-    <div class="absolute inset-0 z-0">
-        <img src="china-latam.jpg" alt="Conexión China Latinoamérica" class="w-full h-full object-cover opacity-30">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/80 via-[#0a0a1a]/60 to-[#0a0a1a]"></div>
-    </div>
-    
-    <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8">
-        <p class="text-[#00f0ff] tracking-[0.4em] text-xs md:text-sm uppercase font-medium">NeoStratego Strategos · RI & Geoeconomía</p>
-        <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight gradient-text">KELBER BERMÚDEZ</h1>
-        <p class="text-xl md:text-2xl text-gray-400 italic font-light">"Conectando Sudamérica y China"</p>
-        <div class="pt-12">
-            <a href="#contacto" class="inline-block border border-[#00f0ff] text-[#00f0ff] px-8 py-3 rounded-full hover:bg-[#00f0ff] hover:text-[#0a0a1a] transition-all duration-300 tracking-widest text-sm uppercase">Iniciar Conversación</a>
-        </div>
-    </div>
-</section>
-
-   <!-- LA VISIÓN CON FOTO DE PERFIL -->
-<section class="py-32 px-6 bg-[#0a0a1a] relative">
-    <div class="max-w-4xl mx-auto text-center space-y-8">
-        <!-- Foto de perfil circular -->
-        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-[#00f0ff] shadow-[0_0_30px_rgba(0,240,255,0.3)] mb-8">
-            <img src="kelber-perfil.jpg" alt="Kelber Bermúdez - Perfil" class="w-full h-full object-cover">
+    <!-- 1. HERO: Fondo China-LatAm -->
+    <section class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+        <!-- Imagen de fondo con overlay oscuro -->
+        <div class="absolute inset-0 z-0">
+            <img src="china-latam.jpg" alt="Conexión China Latinoamérica" class="w-full h-full object-cover opacity-40 animate-slow-zoom">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/90 via-[#0a0a1a]/60 to-[#0a0a1a]"></div>
         </div>
         
-        <div class="w-12 h-1 bg-gradient-to-r from-[#00f0ff] to-[#7b2fff] mx-auto mb-12"></div>
-        <blockquote class="text-3xl md:text-4xl leading-relaxed text-gray-200">"En un mundo multipolar, la estrategia legal es el nuevo lenguaje del poder."</blockquote>
-        <cite class="block text-sm text-[#00f0ff] tracking-widest uppercase not-italic mt-8">— Kelber Bermúdez</cite>
-    </div>
-</section>
-<!-- LIDERAZGO Y NETWORKING -->
-<section class="py-24 px-6 bg-[#0d0d20]">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-            <h2 class="text-4xl md:text-5xl font-serif text-white">Alianzas Estratégicas</h2>
-            <p class="text-gray-400 text-lg leading-relaxed">
-                La diplomacia corporativa moderna requiere conexiones genuinas con líderes globales. Nuestra red abarca gobiernos, cámaras de comercio y corporaciones multinacionales en Asia y América Latina.
-            </p>
-            <div class="flex gap-4 pt-4">
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-[#00f0ff]">15+</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">Países</div>
-                </div>
-                <div class="w-px bg-white/10"></div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-[#00f0ff]">200+</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">Alianzas</div>
-                </div>
-                <div class="w-px bg-white/10"></div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-[#00f0ff]">$500M</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-wider">Inversión Facilitada</div>
-                </div>
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8 mt-20">
+            <p class="text-[#00f0ff] tracking-[0.4em] text-xs md:text-sm uppercase font-medium">NeoStratego Strategos · RI & Geoeconomía</p>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight gradient-text drop-shadow-2xl">KELBER BERMÚDEZ</h1>
+            <p class="text-xl md:text-2xl text-gray-300 italic font-light">"Conectando Sudamérica y China"</p>
+            <div class="pt-12">
+                <a href="#contacto" class="inline-block border border-[#00f0ff] text-[#00f0ff] px-8 py-3 rounded-full hover:bg-[#00f0ff] hover:text-[#0a0a1a] transition-all duration-300 tracking-widest text-sm uppercase shadow-[0_0_20px_rgba(0,240,255,0.3)]">Iniciar Conversación</a>
             </div>
         </div>
-        <div class="rounded-lg overflow-hidden border border-white/10 shadow-2xl">
-            <img src="kelber-ejecutivos.jpg" alt="Kelber Bermúdez con ejecutivos internacionales" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+    </section>
+
+    <!-- 2. LA VISIÓN: Foto de Perfil -->
+    <section class="py-32 px-6 bg-[#0a0a1a] relative">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <!-- Círculo de perfil -->
+            <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-[#00f0ff] shadow-[0_0_30px_rgba(0,240,255,0.3)] mb-8 bg-[#1a1a3a]">
+                <img src="kelber-perfil.jpg" alt="Kelber Bermúdez" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="w-12 h-1 bg-gradient-to-r from-[#00f0ff] to-[#7b2fff] mx-auto mb-12"></div>
+            <blockquote class="text-3xl md:text-4xl leading-relaxed text-gray-200">"En un mundo multipolar, la estrategia legal es el nuevo lenguaje del poder."</blockquote>
+            <cite class="block text-sm text-[#00f0ff] tracking-widest uppercase not-italic mt-8">— Kelber Bermúdez</cite>
         </div>
-    </div>
-</section>
-    
-    <!-- EXPERTISE GRID -->
+    </section>
+
+    <!-- 3. LIDERAZGO: Foto con Ejecutivos -->
     <section class="py-24 px-6 bg-[#0d0d20]">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0a0a1a]/50 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 order-2 md:order-1">
+                <h2 class="text-4xl md:text-5xl font-serif text-white">Alianzas Estratégicas</h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    La diplomacia corporativa moderna requiere conexiones genuinas con líderes globales. Nuestra red abarca gobiernos, cámaras de comercio y corporaciones multinacionales en Asia y América Latina.
+                </p>
+                <div class="flex gap-6 pt-4">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-[#00f0ff]">15+</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">Países</div>
+                    </div>
+                    <div class="w-px bg-white/10"></div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-[#00f0ff]">200+</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">Alianzas</div>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-lg overflow-hidden border border-white/10 shadow-2xl order-1 md:order-2 group">
+                <img src="kelber-ejecutivos.jpg" alt="Kelber Bermúdez con ejecutivos" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. EXPERTISE GRID: 3 Módulos -->
+    <section class="py-24 px-6 bg-[#0a0a1a]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0d0d20] hover:-translate-y-2">
+                <div class="text-4xl mb-4 text-[#00f0ff]"></div>
                 <h3 class="text-2xl text-white mb-4 group-hover:text-[#00f0ff] transition-colors">Diplomacia Corporativa</h3>
                 <p class="text-gray-400 leading-relaxed font-light">Estructuración jurídica para alianzas transfronterizas y negociación de alto nivel.</p>
             </div>
-            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0a0a1a]/50 backdrop-blur-sm">
+            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0d0d20] hover:-translate-y-2">
+                <div class="text-4xl mb-4 text-[#00f0ff]">⚖️</div>
                 <h3 class="text-2xl text-white mb-4 group-hover:text-[#00f0ff] transition-colors">Arbitraje Internacional</h3>
                 <p class="text-gray-400 leading-relaxed font-light">Resolución de disputas complejas bajo estándares globales y tratados bilaterales.</p>
             </div>
-            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0a0a1a]/50 backdrop-blur-sm">
+            <div class="group p-8 border border-white/5 hover:border-[#00f0ff]/30 transition-all duration-500 bg-[#0d0d20] hover:-translate-y-2">
+                <div class="text-4xl mb-4 text-[#00f0ff]"></div>
                 <h3 class="text-2xl text-white mb-4 group-hover:text-[#00f0ff] transition-colors">Inteligencia de Mercados</h3>
                 <p class="text-gray-400 leading-relaxed font-light">Análisis geopolítico aplicado a la toma de decisiones de inversión en Asia-LatAm.</p>
             </div>
         </div>
     </section>
 
-    <!-- CONTACTO -->
-   <div class="space-y-2 pt-8 text-sm text-gray-500 tracking-wide">
-    <p>QUITO · BUENOS AIRES · SÃO PAULO</p>
-    <p class="text-[#00f0ff]">estrategia@neostratego.com</p>
-    <p class="text-[#00f0ff]">icd@neostratego.com</p>
-</div>
+    <!-- 5. CONTACTO: Correos Actualizados -->
+    <section id="contacto" class="py-32 px-6 bg-[#0a0a1a] border-t border-white/5">
+        <div class="max-w-3xl mx-auto text-center space-y-8">
+            <h2 class="text-4xl font-serif text-white">Acceso Exclusivo</h2>
+            <p class="text-gray-400 font-light">Para consultas estratégicas y asesoría confidencial.</p>
+            <div class="space-y-4 pt-8 text-sm text-gray-400 tracking-wide">
+                <p>QUITO · BUENOS AIRES · SÃO PAULO</p>
+                <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+                    <a href="mailto:estrategia@neostratego.com" class="text-[#00f0ff] hover:text-white transition-colors underline decoration-[#00f0ff]/30 underline-offset-4">estrategia@neostratego.com</a>
+                    <span class="hidden md:inline text-gray-600">|</span>
+                    <a href="mailto:icd@neostratego.com" class="text-[#00f0ff] hover:text-white transition-colors underline decoration-[#00f0ff]/30 underline-offset-4">icd@neostratego.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="py-12 text-center border-t border-white/5 text-xs text-gray-600 tracking-widest uppercase">
